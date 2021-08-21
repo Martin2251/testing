@@ -3,6 +3,9 @@ import React from "react";
 import { useState } from "react";
 function MainContent() {
   const [counter, setCounter] = useState(0);
+  const reset = () => {
+    setCounter(0);
+  };
 
   return (
     <>
@@ -13,6 +16,9 @@ function MainContent() {
       </button>
       <button data-testid="button-down" onClick={() => setCounter(counter - 1)}>
         Down
+      </button>
+      <button className="reset" onClick={reset}>
+        Reset
       </button>
     </>
   );
