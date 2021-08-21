@@ -11,11 +11,7 @@ function MainContent() {
         {" "}
         Up
       </button>
-      <button
-        disabled
-        data-testid="button-down"
-        onClick={() => setCounter(counter - 1)}
-      >
+      <button data-testid="button-down" onClick={() => setCounter(counter - 1)}>
         Down
       </button>
     </>
