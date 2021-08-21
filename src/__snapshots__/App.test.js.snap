@@ -5,19 +5,22 @@ exports[`should take a snapshot 1`] = `
   <div
     class="App"
   >
-    <div
-      class="Main-Page"
+    <h1
+      data-testid="counter"
     >
-      <h1>
-        Main Page 
-      </h1>
-      <p>
-         Hello welcome to the page 
-      </p>
-      <button>
-        Click me to go somewhere cool 
-      </button>
-    </div>
+      0
+    </h1>
+    <button
+      data-testid="button-up"
+    >
+       Up
+    </button>
+    <button
+      data-testid="button-down"
+      disabled=""
+    >
+      Down
+    </button>
   </div>
 </DocumentFragment>
 `;
