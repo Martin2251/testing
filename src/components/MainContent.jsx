@@ -1,10 +1,24 @@
+import { react } from "@babel/types";
+import React from "react";
+import { useState } from "react";
 function MainContent() {
+  const [counter, setCounter] = useState(0);
+
   return (
-    <div className="Main-Page">
-      <h1>Main Page </h1>
-      <p> Hello welcome to the page </p>
-      <button>Click me to go somewhere cool </button>
-    </div>
+    <>
+      <h1 data-testid="counter">{counter}</h1>
+      <button data-testid="button-up" onClick={() => setCounter(counter + 1)}>
+        {" "}
+        Up
+      </button>
+      <button
+        disabled
+        data-testid="button-down"
+        onClick={() => setCounter(counter - 1)}
+      >
+        Down
+      </button>
+    </>
   );
 }
 export default MainContent;
