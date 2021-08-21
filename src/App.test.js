@@ -1,6 +1,7 @@
 import React from "react";
 import { render, cleanup } from "@testing-library/react";
 import App from "./App";
+import "jest-styled-components";
 
 afterEach(cleanup);
 
