@@ -17,7 +17,6 @@ exports[`should take a snapshot 1`] = `
     </button>
     <button
       data-testid="button-down"
-      disabled=""
     >
       Down
     </button>

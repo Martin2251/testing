@@ -1,5 +1,5 @@
 import React from "react";
-import { render, cleanup } from "@testing-library/react";
+import { render, cleanup, fireEvent } from "@testing-library/react";
 import MainContent from "./MainContent";
 
 afterEach(cleanup);
@@ -11,10 +11,23 @@ it("should equal to 0", () => {
 
 it("should be enabled", () => {
   const { getByTestId } = render(<MainContent />);
-  expect(getByTestId("button-up")).not.toHaveAttribute("disabled");
+  expect(getByTestId("button-up", "button-down")).not.toHaveAttribute(
+    "disabled"
+  );
 });
 
-it("should be disabled", () => {
+it("increments counter", () => {
   const { getByTestId } = render(<MainContent />);
-  expect(getByTestId("button-down")).toBeDisabled();
+
+  fireEvent.click(getByTestId("button-up"));
+
+  expect(getByTestId("counter")).toHaveTextContent("1");
+});
+
+it("decrements counter", () => {
+  const { getByTestId } = render(<MainContent />);
+
+  fireEvent.click(getByTestId("button-down"));
+
+  expect(getByTestId("counter")).toHaveTextContent("-1");
 });
