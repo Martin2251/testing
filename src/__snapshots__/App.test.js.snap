@@ -2,24 +2,94 @@
 
 exports[`should take a snapshot 1`] = `
 <DocumentFragment>
-  <div
+  .c0 {
+  padding: 4em;
+  background: papayawhip;
+  width: 50%;
+  height: 100px;
+  border: 3px solid black;
+  margin: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  background-color: honeydew;
+  width: 50%;
+  height: 100px;
+  border: 1px solid black;
+  margin: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 11px;
+}
+
+.c2 {
+  background: "palevioletred";
+  color: "white";
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+}
+
+<div
     class="App"
   >
-    <h1
-      data-testid="counter"
-    >
-      0
+    <h1>
+      The counter page
     </h1>
-    <button
-      data-testid="button-up"
+    <section
+      class="c0"
     >
-       Up
-    </button>
-    <button
-      data-testid="button-down"
+      <h3
+        data-testid="counter"
+      >
+        0
+      </h3>
+    </section>
+    <section
+      class="c1"
     >
-      Down
-    </button>
+      <button
+        class="c2"
+        data-testid="button-up"
+      >
+         Up
+      </button>
+      <button
+        class="c2"
+        data-testid="button-down"
+      >
+        Down
+      </button>
+      <button
+        class="c2 reset"
+      >
+        Reset
+      </button>
+    </section>
   </div>
 </DocumentFragment>
 `;
